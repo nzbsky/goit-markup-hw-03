@@ -1,3 +1,4 @@
+/* styles.css */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -25,6 +26,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .container {
@@ -70,6 +72,7 @@ header {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #2e2f42;
+  margin-right: 76px;
 }
 
 .logo-web {
@@ -85,11 +88,17 @@ header {
   font-weight: 500;
   color: #2e2f42;
   padding: 24px 0;
-  display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+  color: #404bbf;
 }
 
 .header-address {
   font-style: normal;
+  margin-left: auto;
 }
 
 .header-address ul {
@@ -99,6 +108,12 @@ header {
 
 .header-address a {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-address a:hover,
+.header-address a:focus {
+  color: #404bbf;
 }
 
 /* Hero */
@@ -112,6 +127,8 @@ header {
 .hero-logo {
   font-size: 56px;
   line-height: 1.07;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   color: #ffffff;
   max-width: 496px;
   margin: 0 auto 48px;
@@ -121,10 +138,19 @@ header {
   background-color: #4d5ae5;
   color: #ffffff;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #404bbf;
 }
 
 /* Features */
@@ -141,6 +167,8 @@ header {
 .features-h {
   font-weight: 500;
   font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -154,7 +182,9 @@ header {
 .team-logo {
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
   text-align: center;
+  text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
 }
@@ -166,28 +196,43 @@ header {
 
 .team-card {
   background-color: #ffffff;
-  text-align: center;
   border-radius: 0 0 4px 4px;
   flex-basis: calc((100% - 72px) / 4);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.team-card-content {
+  padding: 32px 16px;
+  text-align: center;
 }
 
 .team-name {
   font-weight: 500;
   font-size: 20px;
-  margin-top: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
   margin-bottom: 8px;
 }
 
 .team-job {
-  margin-bottom: 32px;
+  color: #434455;
+  margin-bottom: 0;
 }
 
 /* Portfolio */
 
+
+.portfolio {
+  padding-bottom: 120px;
+}
+
 .portfolio-logo {
   font-size: 36px;
   line-height: 1.11;
+  letter-spacing: 0.02em;
   text-align: center;
+  text-transform: capitalize;
   color: #2e2f42;
   margin-bottom: 72px;
 }
@@ -195,25 +240,45 @@ header {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 
 .portfolio-card {
-  flex-basis: calc((100% - 48px) / 3);
-  border-bottom: 1px solid #e7e9fc;
+  width: calc((100% - 48px) / 3);
+  border: 1px solid #e7e9fc;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+              0px 1px 1px rgba(46, 47, 66, 0.16),
+              0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-card-content {
+  padding: 32px 16px;
+  border-top: none;
 }
 
 .portfolio-name {
   font-weight: 500;
   font-size: 20px;
-  padding: 32px 0 8px 16px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
 }
 
 .portfolio-job {
-  padding-left: 16px;
-  padding-bottom: 32px;
+  color: #434455;
 }
-
 /* Footer */
 
 .footer {
@@ -237,4 +302,5 @@ header {
 .footer-text {
   max-width: 264px;
   color: #f4f4fd;
+  line-height: 1.5;
 }
